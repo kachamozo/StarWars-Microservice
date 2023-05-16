@@ -6,7 +6,4 @@ function list(req, res) {
 	res.status(200).send(characters);
 }
 
-function nombres(req, res) {
-	res.status(200).send('lista de nombes');
-}
 module.exports = list;
