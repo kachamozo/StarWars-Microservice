@@ -1,9 +1,9 @@
 const express = require('express');
-const characters = require('../controllers');
+const controllers = require('../controllers');
 
 const router = express.Router();
 
-router.get('/', characters.getCharacters);
-router.post('/', characters.createCharacter);
+router.get('/', controllers.getCharacters);
+router.post('/', controllers.createCharacter);
 
 module.exports = router;
