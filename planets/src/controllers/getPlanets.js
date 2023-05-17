@@ -1,8 +1,9 @@
-const planets = require('../data/planets.json');
+const Planets = require('../data');
 
-// mediante esta funcion importamos un json y devolvemos un objeto js
+// simula un modelo
 
-function getPlanets(req, res) {
+async function getPlanets(req, res) {
+	const planets = await Planets.list();
 	res.status(200).send(planets);
 }
 
