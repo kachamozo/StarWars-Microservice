@@ -1,8 +1,9 @@
-const films = require('../data/films.json');
+const Films = require('../data');
 
-// mediante esta funcion importamos un json y devolvemos un objeto js
+// simula un modelo
 
-function getFilms(req, res) {
+async function getFilms(req, res) {
+	const films = Films.list();
 	res.status(200).send(films);
 }
 
