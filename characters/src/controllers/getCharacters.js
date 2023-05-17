@@ -1,8 +1,9 @@
-const characters = require('../data/characters.json');
+const Characters = require('../data');
 
-// mediante esta funcion importamos un json y devolvemos un objeto js
+//simula un modelo
 
-function list(req, res) {
+async function list(req, res) {
+	const characters = await Characters.list();
 	res.status(200).send(characters);
 }
 
