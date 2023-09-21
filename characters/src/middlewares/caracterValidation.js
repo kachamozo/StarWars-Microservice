@@ -1,4 +1,6 @@
-const { ClientError } = require('../utils/error');
+const { ClientError } = require('../errors');
+
+// usamos el manejador de errores personalizado
 
 module.exports = (req, res, next) => {
 	const { name } = req.body;
