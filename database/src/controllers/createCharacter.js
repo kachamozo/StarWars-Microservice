@@ -1,10 +1,9 @@
-const store = require('../database');
+const { Character } = require('../database');
 const { response } = require('../utils');
 
 module.exports = async (req, res) => {
-	const { model } = req.params;
 	const { id, name, height, mass, homeworld, films } = req.body;
-	const data = await store[model].insert({
+	const data = await Character.insert({
 		_id: id,
 		name,
 		height,

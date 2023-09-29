@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const controllers = require('../controllers');
 const middlewares = require('../middlewares');
-const { Character } = require('../database');
 
 const router = Router();
 
@@ -12,7 +11,9 @@ router.get(
 	middlewares.idValidation,
 	controllers.getById
 );
-router.post('/:model', controllers.createCharacter);
+router.post('/Character', controllers.createCharacter);
+router.post('/Film', controllers.createFilm);
+router.post('/Planet', controllers.createPlanet);
 router.delete('/:model/:id', middlewares.idValidation, controllers.deleteById);
 
 module.exports = router;
