@@ -2,6 +2,7 @@ const films = require('./films.json');
 const axios = require('axios');
 
 // mediante esta funcion importamos un json y devolvemos un objeto js
+// utilizamos estos datos de prueba para desarrolar toda la logica y luego conectemos con la base de datos
 
 module.exports = {
 	// list: async () => films,

@@ -5,6 +5,7 @@ const { response } = require('../utils');
 // Es asincrono por que si no me trae un array vacio
 
 module.exports = async (req, res) => {
-	const newPlanet = await Planets.create();
+	const planet = req.body;
+	const newPlanet = await Planets.insert(planet);
 	response(res, 201, newPlanet);
 };

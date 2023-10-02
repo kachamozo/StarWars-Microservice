@@ -6,6 +6,8 @@ const router = Router();
 
 // solo importamos una sola ves el index de controllers y usamos como un objeto
 router.get('/', controllers.getPlanets);
-router.post('/', middlewares.caracterValidation, controllers.createPlanet);
+router.get('/:id', controllers.getPlanetById);
+router.post('/', middlewares.planetValidation, controllers.createPlanet);
+router.delete('/:id', controllers.deletePlanet);
 
 module.exports = router;
