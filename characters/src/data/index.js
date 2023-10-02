@@ -11,26 +11,27 @@ module.exports = {
 	// },
 
 	// Aqui conectamos con el microservicio de database que tiene el puerto 8004 ya que database se conecta con mongo y nos devuelve los datos ya formateados
+	// Para trabajar de forma local http://localhost:8004/Character
 	list: async () => {
-		const results = await axios.get('http://localhost:8004/Character');
+		const results = await axios.get('http://database:8004/Character');
 		return results.data;
 	},
 
 	getById: async (id) => {
-		const results = await axios.get(`http://localhost:8004/Character/${id}`);
+		const results = await axios.get(`http://database:8004/Character/${id}`);
 		return results.data;
 	},
 
 	insert: async (character) => {
 		const results = await axios.post(
-			'http://localhost:8004/Character',
+			'http://database:8004/Character',
 			character
 		);
 		return results.data;
 	},
 
 	delete: async (id) => {
-		const results = await axios.delete(`http://localhost:8004/Character/${id}`);
+		const results = await axios.delete(`http://database:8004/Character/${id}`);
 		return results.data;
 	},
 };

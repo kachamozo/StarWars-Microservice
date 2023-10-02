@@ -12,9 +12,9 @@ app.use(
 	'/characters',
 	createProxyMiddleware({
 		// para trabajar localmente
-		target: 'http://localhost:8001',
+		// target: 'http://localhost:8001',
 		// para trabajar con docker
-		// target: 'http://characters:8001',
+		target: 'http://characters:8001',
 		// desde aqui el gateway modifica los headers hacia las distintos microservicios
 		changeOrigin: true,
 	})
@@ -23,8 +23,8 @@ app.use(
 app.use(
 	'/films',
 	createProxyMiddleware({
-		target: 'http://localhost:8002',
-		// target: 'http://films:8002',
+		// target: 'http://localhost:8002',
+		target: 'http://films:8002',
 		// desde aqui el gateway modifica los headers hacia las distintos microservicios
 		changeOrigin: true,
 	})
@@ -33,8 +33,8 @@ app.use(
 app.use(
 	'/planets',
 	createProxyMiddleware({
-		target: 'http://localhost:8003',
-		// target: 'http://planets:8003',
+		// target: 'http://localhost:8003',
+		target: 'http://planets:8003',
 		// desde aqui el gateway modifica los headers hacia las distintos microservicios
 		changeOrigin: true,
 	})
@@ -43,8 +43,8 @@ app.use(
 app.use(
 	'/database',
 	createProxyMiddleware({
-		target: 'http://localhost:8004',
-		// target: 'http://database:8004',
+		// target: 'http://localhost:8004',
+		target: 'http://database:8004',
 		// desde aqui el gateway modifica los headers hacia las distintos microservicios
 		changeOrigin: true,
 	})
