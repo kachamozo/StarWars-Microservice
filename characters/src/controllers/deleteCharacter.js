@@ -5,6 +5,7 @@ const { response } = require('../utils');
 // Es asincrono por que si no me trae un array vac
 
 module.exports = async (req, res) => {
-	const getAllCharacters = await Characters.list();
-	response(res, 200, getAllCharacters);
+	const { id } = req.params;
+	const deleteCharacter = await Characters.delete(id);
+	response(res, 200, deleteCharacter);
 };
