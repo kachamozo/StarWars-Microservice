@@ -1,4 +1,4 @@
-const Characters = require('../data');
+const Films = require('../data');
 const { response } = require('../utils');
 
 //Como el index de data retorna funciones dentro de un objeto, podemos SIMULAR UN MODELO
@@ -6,6 +6,6 @@ const { response } = require('../utils');
 
 module.exports = async (req, res) => {
 	const { id } = req.params;
-	const deleteCharacter = await Characters.delete(id);
-	response(res, 200, deleteCharacter);
+	const deleteFilm = await Films.delete(id);
+	response(res, 200, deleteFilm);
 };

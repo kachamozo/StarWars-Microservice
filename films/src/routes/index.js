@@ -6,6 +6,8 @@ const router = Router();
 
 // solo importamos una sola ves el index de controllers y usamos como un objeto
 router.get('/', controllers.getFilms);
-router.post('/', middlewares.caracterValidation, controllers.createFilm);
+router.get('/:id', controllers.getFilmById);
+router.post('/', middlewares.filmValidation, controllers.createFilm);
+router.delete('/:id', controllers.deleteFilm);
 
 module.exports = router;
