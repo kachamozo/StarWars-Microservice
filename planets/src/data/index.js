@@ -28,6 +28,14 @@ module.exports = {
 		return results.data;
 	},
 
+	updateById: async (id, planet) => {
+		const results = await axios.put(
+			`http://database:8004/Planet/${id}`,
+			planet
+		);
+		return results.data;
+	},
+
 	delete: async (id) => {
 		const results = await axios.delete(`http://database:8004/Planet/${id}`);
 		return results.data;

@@ -27,6 +27,11 @@ module.exports = {
 		return results.data;
 	},
 
+	updateById: async (id, film) => {
+		const results = await axios.put(`http://database:8004/Film/${id}`, film);
+		return results.data;
+	},
+
 	delete: async (id) => {
 		const results = await axios.delete(`http://database:8004/Film/${id}`);
 		return results.data;

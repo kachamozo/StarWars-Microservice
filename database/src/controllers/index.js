@@ -6,5 +6,8 @@ module.exports = {
 	createCharacter: catchedAsync(require('./createCharacter')),
 	createFilm: catchedAsync(require('./createFilm')),
 	createPlanet: catchedAsync(require('./createPlanet')),
+	updateCharacter: catchedAsync(require('./updateCharacter')),
+	updateFilm: catchedAsync(require('./updateFilm')),
+	updatePlanet: catchedAsync(require('./updatePlanet')),
 	deleteById: catchedAsync(require('./deleteById')),
 };

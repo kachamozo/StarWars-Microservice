@@ -14,6 +14,9 @@ router.get(
 router.post('/Character', controllers.createCharacter);
 router.post('/Film', controllers.createFilm);
 router.post('/Planet', controllers.createPlanet);
+router.put('/Character/:id', controllers.updateCharacter);
+router.put('/Film/:id', controllers.updateFilm);
+router.put('/Planet/:id', controllers.updatePlanet);
 router.delete('/:model/:id', middlewares.idValidation, controllers.deleteById);
 
 module.exports = router;

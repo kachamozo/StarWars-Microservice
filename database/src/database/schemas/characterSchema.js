@@ -32,6 +32,10 @@ characterSchema.statics.insert = async function (character) {
 	return await this.create(character);
 };
 
+characterSchema.statics.updateById = async function (id, character) {
+	return await this.findByIdAndUpdate(id, character);
+};
+
 characterSchema.statics.delete = async function (id) {
 	return await this.findByIdAndRemove(id);
 };

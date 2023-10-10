@@ -30,6 +30,14 @@ module.exports = {
 		return results.data;
 	},
 
+	updateById: async (id, character) => {
+		const results = await axios.put(
+			`http://database:8004/Character/${id}`,
+			character
+		);
+		return results.data;
+	},
+
 	delete: async (id) => {
 		const results = await axios.delete(`http://database:8004/Character/${id}`);
 		return results.data;
