@@ -12,7 +12,7 @@ El servicio de `films` administra la información relacionada con las películas
 
 ## Planet
 
-El microservicio `planet` se encarga de gestionar la información de los planetas dentro del universo ficticio. Proporciona una API REST para acceder a detalles sobre los planetas, como su nombre, ubicación y características especiales. Además permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre los planetas, este servicio se integra con el servicio de `characters` para mostrar qué personajes están relacionados con cada planeta.
+El microservicio `planets` se encarga de gestionar la información de los planetas dentro del universo ficticio. Proporciona una API REST para acceder a detalles sobre los planetas, como su nombre, ubicación y características especiales. Además permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre los planetas, este servicio se integra con el servicio de `characters` para mostrar qué personajes están relacionados con cada planeta.
 
 ## Database
 
@@ -37,7 +37,7 @@ Claro, aquí tienes los pasos a seguir para clonar el repositorio y ejecutar los
 3. Clona el repositorio desde GitHub usando el siguiente comando.
 
    ```bash
-   git clone <https://github.com/kachamozo/StarWars-Microservice.git>
+   git clone https://github.com/kachamozo/StarWars-Microservice.git
    ```
 
 ### Paso 2: Iniciar Docker Compose
@@ -59,7 +59,7 @@ Claro, aquí tienes los pasos a seguir para clonar el repositorio y ejecutar los
 5. Una vez que tengas Docker y Docker Compose instalados, navega al directorio donde clonaste el repositorio:
 
    ```bash
-   cd nombre-del-repo
+   cd StarWars-Microservice
    ```
 
 6. Ejecuta el siguiente comando para iniciar los microservicios utilizando Docker Compose. Esto utilizará el archivo `docker-compose.yml` que se encuentra en el repositorio:
