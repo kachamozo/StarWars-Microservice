@@ -62,7 +62,13 @@ Claro, aquí tienes los pasos a seguir para clonar el repositorio y ejecutar los
    cd StarWars-Microservice
    ```
 
-6. Ejecuta el siguiente comando para iniciar los microservicios utilizando Docker Compose. Esto utilizará el archivo `docker-compose.yml` que se encuentra en el repositorio:
+6. Ejecuta el siguiente comando para crear las imagenes docker de los microservicios utilizando Docker-Compose. Esto utilizará el archivo `docker-compose.yml` que se encuentra en el repositorio:
+
+   ```bash
+   docker-compose build
+   ```
+
+7. Ejecuta el siguiente comando para iniciar los microservicios utilizando Docker Compose. Esto utilizará el archivo `docker-compose.yml` que se encuentra en el repositorio:
 
    ```bash
    docker-compose up -d
@@ -72,7 +78,7 @@ Claro, aquí tienes los pasos a seguir para clonar el repositorio y ejecutar los
 
 ### Paso 3: Acceder a los Microservicios
 
-7. Una vez que los microservicios estén en funcionamiento, podrás acceder a ellos a través de las rutas definidas en cada microservicio. Por ejemplo:
+8. Una vez que los microservicios estén en funcionamiento, podrás acceder a ellos a través de las rutas definidas en cada microservicio. Por ejemplo:
 
    - El servicio `characters` podría estar disponible en `http://localhost:8000/characters`.
    - El servicio `films` podría estar disponible en `http://localhost:8000/films`.
@@ -135,7 +141,7 @@ Claro, aquí tienes los pasos a seguir para clonar el repositorio y ejecutar los
 - PUT /planets/{id}: Actualiza la información sobre un planeta específico por su ID, y un json con los datos a actualizar.
 - DELETE /planets/{id}: Elimina un planeta de la base de datos proporcionando su recpectivo ID.
 
-8. Desde su cliente RestAPI favorito (Postman, Insomnia, ThunderClient, etc.) hacer las consultas respectivas.
+9. Desde su cliente RestAPI favorito (Postman, Insomnia, ThunderClient, etc.) hacer las consultas respectivas.
 
    ![Colsulta de lista de personajes](/postman.png)
 
