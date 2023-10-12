@@ -135,4 +135,8 @@ Claro, aquí tienes los pasos a seguir para clonar el repositorio y ejecutar los
 - PUT /planets/{id}: Actualiza la información sobre un planeta específico por su ID, y un json con los datos a actualizar.
 - DELETE /planets/{id}: Elimina un planeta de la base de datos proporcionando su recpectivo ID.
 
+8. Desde su cliente RestAPI favorito (Postman, Insomnia, ThunderClient, etc.) hacer las consultas respectivas.
+
+   ![Colsulta de lista de personajes](/postman.png)
+
 ¡Eso es todo! Ahora deberías tener los microservicios en funcionamiento en tu máquina local. Asegúrate de que Docker Compose se esté ejecutando y de que los servicios se estén ejecutando correctamente. Puedes detener los servicios en cualquier momento ejecutando `docker-compose down` desde el directorio del repositorio clonado.
